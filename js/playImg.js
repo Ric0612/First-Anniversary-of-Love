@@ -3,9 +3,14 @@ btn.style.opacity = 0;
 var btnVal = 0;
 
 function showImage(){
+	// responsive landscape sizing, centered
 	if(myImage){
-		myImage.style.width = "800px"; 
-		myImage.style.height = "450px"; 
+		myImage.style.display = "block";
+		myImage.style.margin = "0 auto";
+		myImage.style.width = "min(90vw, 800px)";    // scale down on small screens, cap at 800px
+		myImage.style.height = "auto";
+		myImage.style.maxHeight = "60vh";            // avoid overflowing tall screens
+		myImage.style.aspectRatio = "16/9";          // keep landscape ratio
 		myImage.style.objectFit = "cover";
 		myImage.style.objectPosition = "center";
 	}
@@ -54,10 +59,14 @@ function play(){
 
 function preshowImage(){
 	document.getElementById("imgTxt").style.opacity = 0;
-	// enforce landscape sizing for the preview as well
+	// responsive landscape sizing for the preview as well
 	if(myImage){
-		myImage.style.width = "800px";
-		myImage.style.height = "450px";
+		myImage.style.display = "block";
+		myImage.style.margin = "0 auto";
+		myImage.style.width = "min(90vw, 800px)";
+		myImage.style.height = "auto";
+		myImage.style.maxHeight = "60vh";
+		myImage.style.aspectRatio = "16/9";
 		myImage.style.objectFit = "cover";
 		myImage.style.objectPosition = "center";
 	}
