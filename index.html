@@ -33,9 +33,13 @@
 		<div id="heartTxt">
 			<span id="clickMe">US</span>
 			<div id="heart">
-				<button id="button" onclick="play()"></button>
+				<button id="button" onclick="play()" aria-label="Open" style="background:transparent;border:none;cursor:pointer;padding:8px;">
+
+					<svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+						<path d="M12 21s-7.2-4.73-9.2-7.02C-0.2 9.68 3.33 4 7.5 6.5 9.7 7.9 12 10.5 12 10.5s2.3-2.6 4.5-4C20.67 4 24.2 9.68 21.2 13.98 19.2 16.27 12 21 12 21z" fill="#ff5fa3"/>
+					</svg>
+				</button>
 			</div>
-			<a id="viewBtn" href="view.html" style="display:none; opacity:0; margin:8px auto 0; text-decoration:none; padding:8px 12px; border-radius:6px; background:#ff9bb3; color:#fff; font-weight:600; width:max-content; display:block;">View</a>
 		</div>
 		
 		<script >
@@ -59,5 +63,34 @@
 		<script type="text/javascript" src="./js/typeWriter.js"></script>
 		<script type="text/javascript" src="./js/date.js"></script>
 		<script type="text/javascript" src="./js/playImg.js"></script>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const heartBtn = document.getElementById('button');
+				if(!heartBtn) return;
+
+				heartBtn.addEventListener('click', function replaceOnce(){
+					setTimeout(function(){
+						const nextBtn = document.createElement('button');
+						nextBtn.id = 'nextBtn';
+						nextBtn.title = 'Next';
+						nextBtn.style.background = 'linear-gradient(90deg,#ff9bb3,#ff6fa7)';
+						nextBtn.style.border = 'none';
+						nextBtn.style.color = '#fff';
+						nextBtn.style.padding = '8px 12px';
+						nextBtn.style.borderRadius = '8px';
+						nextBtn.style.cursor = 'pointer';
+						nextBtn.innerHTML = '<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><path d=\"M5 12h14M13 5l7 7-7 7\" stroke=\"#fff\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>';
+
+						nextBtn.addEventListener('click', function(){
+							window.location.href = 'view.html';
+						});
+
+						heartBtn.replaceWith(nextBtn);
+					}, 100);
+					heartBtn.removeEventListener('click', replaceOnce);
+				}, { once: true });
+			});
+		</script>
 	</body>
 </html>
