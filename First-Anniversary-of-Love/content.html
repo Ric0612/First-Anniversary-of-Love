@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/content.css">
+
+    <style>
+        .landscape {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 24px;
+            max-width: 1100px;
+            margin: 36px auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .gif_container{
+            flex: 0 0 44%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        .gif_container img{
+            width:100%;
+            max-width:360px; 
+            height:auto;
+            border-radius:12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+        }
+
+        .message_container{
+            flex: 1 1 56%;
+            background: linear-gradient(180deg, #fff5fb 0%, #ffeef6 100%);
+            border-radius:12px;
+            padding:20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            max-height: 60vh; 
+            overflow-y: auto;
+        }
+
+        .message_container h2{
+            margin-top:0;
+            margin-bottom:12px;
+            color:#b3005a;
+        }
+
+        .message_container p{
+            color:#4a2433;
+            line-height:1.55;
+            margin-bottom:12px;
+            white-space:pre-wrap;
+        }
+
+        .message_container::-webkit-scrollbar{ width: 8px; }
+        .message_container::-webkit-scrollbar-thumb{
+            background: linear-gradient(#ff9bb3,#ff6fa7);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 720px){
+            .landscape{ flex-direction: column; max-width: 92%; }
+            .gif_container{ flex: none; }
+            .message_container{ max-height: 50vh; margin-top: 12px; }
+            .gif_container img{ max-width: 280px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">HAPPY 1 YEAR!</h1>
+        </div>
+
+        <div class="landscape">
+            <div class="gif_container">
+                <img src="https://i.gifer.com/Pak.gif" alt="Cute animated illustration">
+            </div>
+
+            <div class="message_container" aria-label="Message from your partner">
+                <h2>HI BABY, 💖</h2>
+
+                <p>Hi baby i made this for you to give you my letter and to greet you happy anniversary, hindi pa kasi nadating yung other gift ko eh hehehe. I know kahit hindi pa tayo officialy we made alot of memories of love and happiness na. I know being in a long-distance relationship is not easy, and kapag mas tumatagal mas lumalaki yung mga challenges natin, but I just want you to know na hindi ka nag iisa and lalagpasan natin ng lahat ng yun magkasama.</p>
+
+                <p>I know i have alot of insecurity at pag kukulang pero i just want to let you know palagi na kahit gano pa man yung years na abutin natin my love for you will always stay the same. We made our family rule together and I will keep it palagi.</p>
+
+                <p>Thank you for every effort and sacrifices that you made for us and for our future. I know that you love me very much and hindi kita papabayaan or sasayangin lahat ng love mo sakin baby. Sa lahat ng traumas mo and naging bad experience, thankyou for giving me a chance to show you my love and giving me your trust. I will take care of you palagi.</p>
+
+                <p>Kung ano pa man yung marating natin sa buhay, I will never forget kung saan tayo nag simula, kung pano kita pinafall sakin hihihi, You are my lang forever dapat. I will make sure well both have healthy relationship.💞</p>
+
+                <p style="margin-top:18px;">Always yours,<br>Richi Baby</p>
+            </div>
+        </div>
+
+    <div style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); display:flex; gap:12px; align-items:center; z-index:1000;">
+        <a id="fbContact" href="https://www.facebook.com/Squidy12Mojo" target="_blank" rel="noopener noreferrer" style="text-decoration:none; padding:8px 12px; border-radius:6px; background:#1877f2; color:#fff; font-weight:600;">Message your future husband</a>
+        <a href="index.html" style="text-decoration:none; padding:8px 12px; border-radius:6px; background:#ff9bb3; color:#fff; font-weight:600;">Go back</a>
+    </div>
+
+</body>
+</html>

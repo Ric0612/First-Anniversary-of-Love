@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta charset="UTF-8">
+		<title>Our 1st Anniversary of being together and loving each other</title>
+		<link rel="stylesheet" type="text/css" href="./css/format.css">
+	</head>
+
+	<body style="margin:0px">
+		<canvas></canvas>
+		<div id="imgTxt">
+			<span id="Txt"></span> <br />
+			<span id="tmp"></span>
+			<img id="img" src="">
+		</div>
+		
+		<div id="content">
+			<h2 id="together">We have been together</h2>
+			<div id="timer">
+				<b id="d"></b> Days 
+				<b id="h"></b> Hours
+				<b id="m"></b> Minutes
+				<b id="s"></b> Seconds
+			</div>
+		</div>
+
+    	<div id = "typeDiv">
+        	<span id="txt1"></span> <br />
+        	<span id="txt2"></span>
+    	</div>		
+		
+		<div id="heartTxt">
+			<span id="clickMe">US</span>
+			<div id="heart">
+				<button id="button" onclick="play()"></button>
+			</div>
+			<a id="viewBtn" href="view.html" style="display:none; opacity:0; margin:8px auto 0; text-decoration:none; padding:8px 12px; border-radius:6px; background:#ff9bb3; color:#fff; font-weight:600; width:max-content; display:block;">View</a>
+		</div>
+		
+		<script >
+			var ok = 0;
+			var flag = 1;
+			var myImage = document.getElementById("img");
+			var myTxt = document.getElementById("Txt");
+			var imageArray = ["pic/pic1.png", "pic/pic2.png", "pic/pic3.png", "pic/pic4.png", "pic/pic5.png", "pic/pic6.png", 
+			"pic/pic7.png", "pic/pic8.png"];
+			var imageIndex = 0;
+			var txtArray = ["My sneaky impostor", "I'll play any game just to be with you", "Willing to be your gardener and give u lots of food",
+			 "We need each other to survive everyday", "You're my world", "I'll wear pink for you anytime",
+			 "I'll protect you always", "Having a simple life with you is the best life ever"];
+			 var len = imageArray.length;
+			var t = 0;
+		</script>
+			
+
+			
+		<script type="text/javascript" src="./js/stars.js"></script>
+		<script type="text/javascript" src="./js/typeWriter.js"></script>
+		<script type="text/javascript" src="./js/date.js"></script>
+		<script type="text/javascript" src="./js/playImg.js"></script>
+	</body>
+</html>
